@@ -32,7 +32,7 @@ public class FamilyTree
         void addChild(TreeNode childNode)
         {
             // Add childNode to this node's children list. 
-        	parent.children.add(childNode);
+        	this.children.add(childNode);
         	// Also set childNode's parent to this node.
         	childNode.parent = this;
         }
@@ -140,7 +140,7 @@ public class FamilyTree
 			//?? throw a TreeException with a useful message
 			throw new TreeException("Line is not legal");
 		}
-		String parent = line.substring(0, ':'); //The substring of line that starts at char #0 and ends just before colonIndex. Check the API for 
+		String parent = line.substring(0, colonIndex); //The substring of line that starts at char #0 and ends just before colonIndex. Check the API for 
 				           //class java.util.String, method substring(), if you need guidance.
 		String childrenString = line.substring(colonIndex + 1); //The substring of line that starts just after colonIndex and goes through the end of
 				                   //the line. You'll use a different version of substring().
