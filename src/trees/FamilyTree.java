@@ -155,12 +155,12 @@ public class FamilyTree
 			parentNode = root = new TreeNode(parent);
 		else
 		{
-			parentNode = root.getNodeWithName("parent");  //There's a method in Node that searches for a named node. 
+			parentNode = root.getNodeWithName(parent);  //There's a method in Node that searches for a named node. 
 			//??? If the parent node wasn't found, there must have been something wrong in the 
 				//data file. Throw an exception.
 			if(parentNode == null)
 			{
-				throw new TreeException("null");
+				throw new TreeException("nada");
 			}
 		}
 		
